@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
-import './App.css';
-import './assets/css/bootstrap.min.css';
-import './assets/css/main.css';
+import '../style/App.css';
+import '../style/bootstrap.min.css';
+import '../style/main.css';
 
-class App extends Component {
+class Contact extends Component {
     render() {
         return (
         <div className="Contact">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-6 d-none d-sm-none d-md-block imgcontact">
-                        <img src={ require('./assets/logo/logo-alterra-academy-plain@2x.png') } className="center depan" alt=""/>
+                        <img src={ require('../logo/logo-alterra-academy-plain@2x.png') } className="center depan" alt=""/>
                     </div>
                     <div className="col-md-6 col-12 padding75px">
                         <h1 className="Muli28">Contact Us </h1>
                         <span className="Muli12">Send us a message and we will get back to you as soon as possible</span><br/><br/>
                         <label for="username">Name<span className="fontRed">*</span></label><br/>
                         <div className="input-group flex-nowrap w445h52">
-                        <div className="input-group-prepend">
-                            <span className="input-group-text bgnWhite" id="addon-wrapping"><img src={ require('./assets/ico/ico-user@2x.png') }
-                                    className="imgName"/></span>
-                        </div>
-                        <input type="text" id="username" className="form-control w400h52 fontMuli" placeholder="Username"
+                            <div className="input-group-prepend">
+                                <span className="input-group-text bgnWhite" id="addon-wrapping"><img src={ require('../ico/ico-user@2x.png') }
+                                        className="imgName"/></span>
+                            </div>
+                            <input type="text" id="username" className="form-control w400h52 fontMuli" placeholder="Username"
                             aria-label="Username" aria-describedby="addon-wrapping" style={{borderLeft: 'white'}}/>
                     </div><br/>
                     <label for="email">Email<span className="fontRed">*</span></label>
                     <div className="input-group flex-nowrap w445h52">
                         <div className="input-group-prepend">
-                            <span className="input-group-text bgnWhite" id="addon-wrapping"><img src={require('./assets/ico/ico-email@2x.png')}
+                            <span className="input-group-text bgnWhite" id="addon-wrapping"><img src={require('../ico/ico-email@2x.png')}
                                     className="imgEmail"/></span>
                         </div>
                         <input type="email" id="email" className="form-control w400h52 fontMuli" placeholder="Username.gmail.com"
@@ -36,7 +36,7 @@ class App extends Component {
                     <label for="phone">Phone Number<span className="fontRed">*</span></label>
                     <div className="input-group flex-nowrap w445h52">
                         <div className="input-group-prepend">
-                            <span className="input-group-text bgnWhite" id="addon-wrapping"><img src={require('./assets/ico/ico-phone@2x.png')}
+                            <span className="input-group-text bgnWhite" id="addon-wrapping"><img src={require('../ico/ico-phone@2x.png')}
                                     className="imgPhone"/></span>
                         </div>
                         <input type="text" id="phone" className="form-control w400h52 fontMuli" placeholder="08525893xxx"
@@ -63,4 +63,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default Contact;

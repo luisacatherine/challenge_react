@@ -7,8 +7,43 @@ body, p {
     font-size: 14px;
 }
 
+.isi-blog {
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.top-judul {
+    font-family: 'Muli', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.img-blog {
+    width: 100%;
+}
+
+.container-blog {
+    margin: 160px auto;
+}
+
+.col-blog {
+    margin: 10px auto;
+}
+
+.nav-left {
+    width: 100%;
+    position: sticky;
+    top: 160px;
+}
+
 .italic {
     font-style: italic;
+}
+
+.searchbar {
+    width: 100%;
+    margin: 30px auto;
 }
 
 #name {
@@ -156,13 +191,16 @@ body, p {
     bottom: 0;
 }
 
-.header {
+.header-new {
     margin: 0;
     width: 100%;
     height: auto;
     background-color: white;
     padding: 16px 0 12.83px 0;
     box-shadow: 0 3px 6px RGBA(0,0,0,.16);
+    top: 0;
+    position: fixed;
+    z-index: 10;
 }
 
 #copy-right {
