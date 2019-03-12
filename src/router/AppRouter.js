@@ -16,7 +16,7 @@ class AppAjax extends Component {
 
 	render() {
     	return (
-      		<div className="App">
+      		<div className="AppAjax">
               <Header postSignout={this.postSignout} />
               <MainRoute />
       		</div>

@@ -78,8 +78,29 @@ body, p {
     vertical-align: middle;
 }
 
+.box-gallery {
+    margin-top: 160px;
+}
+
+.box-contact {
+    margin-top: 100px;
+}
+
+.box-all {
+    text-align: center;
+    margin: 160px auto 60px auto;
+    padding: 100px;
+    border: 1px solid #DEDEDE;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px RGBA(0,0,0,.16);
+}
+
+.nav-1 {
+    padding: 20px;
+}
+
 .bio {
-    padding-top: 50px;
+    padding-top: 160px;
     padding-bottom: 54px;
     background-image: url(../img/img-header@2x.png);
     background-size: cover;

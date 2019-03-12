@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import '../style/App.css';
 import '../style/bootstrap.min.css';
 import '../style/main.css';
-import photo1 from '../img/sms.png'
 
 const Berita = (props) => {
     return(

@@ -7,7 +7,7 @@ class Contact extends Component {
     render() {
         return (
         <div className="Contact">
-            <div className="container-fluid">
+            <div className="container-fluid box-contact">
                 <div className="row">
                     <div className="col-md-6 d-none d-sm-none d-md-block imgcontact">
                         <img src={ require('../logo/logo-alterra-academy-plain@2x.png') } className="center depan" alt=""/>

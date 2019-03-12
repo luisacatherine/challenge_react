@@ -11,7 +11,7 @@ import photo1 from '../img/sms.png'
 const az = {photo1}
 const urlTop = 'https://newsapi.org/v2/everything'
 const api_key = 'e7f87120a12d4566b76749df7eba0742'
-class ClassBlog extends Component{
+class ClassNewYork extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -24,8 +24,7 @@ class ClassBlog extends Component{
         axios
             .get(urlTop, {
                 params: {
-                    // country: 'id'
-                    q: 'bitcoin'
+                    sources: 'the-new-york-times'
                 },
                 headers: {
                     'X-Api-Key': api_key
@@ -40,48 +39,10 @@ class ClassBlog extends Component{
             });
     };
 
-    handleInputChange = e => {
-        console.log("event", e.target.value);
-        let value = e.target.value;
-
-        this.setState(
-            {
-                search: value
-            },
-            () => {
-                this.searchNews(value);
-            }
-        );
-    };
-
-    searchNews = async keyword => {
-        console.log("searchNews", keyword);
-        const self = this;
-        if (keyword.length > 2) {
-            try {
-                const response = await axios.get(
-                    urlTop, {
-                        params: {
-                            q: keyword,
-                            language: 'id'
-                        },
-                        headers: {
-                            'X-Api-Key': api_key
-                        }
-                    }
-                );
-                console.log(response);
-                self.setState({listNews: response.data.articles});
-            } catch (error) {
-                console.log(error);
-            }
-        }
-    }
-
     render(){
         const {listNews} = this.state;
         return(
-            <div className="ClassBlog">
+            <div className="ClassNewYork">
                 <div className="container container-blog">
                     <div className="row">
                         <div className="col-md-4 col-blog">
@@ -104,4 +65,4 @@ class ClassBlog extends Component{
     };
 };
 
-export default ClassBlog;
+export default ClassNewYork;

@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import '../style/App.css';
 import '../style/bootstrap.min.css';
 import '../style/main.css';
-import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Galeri from '../components/Galeri';
+import ClassReuters from '../components/ClassReuters';
+import Category from '../components/Category';
 
-class Gallery extends Component {
+class Reuters extends Component {
 	render() {
     	return (
-      		<div className="Gallery">
-				<Galeri />
+      		<div className="Reuters">
+			  	<Category />
+                <ClassReuters />
 				<Footer />
       		</div>
     	);
   	}
 }
 
-export default Gallery;
+export default Reuters;

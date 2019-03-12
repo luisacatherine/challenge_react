@@ -14,7 +14,7 @@ class Galeri extends Component{
     render(){
         return(
             <div className="Galeri">
-                <div className="container-fluid">
+                <div className="container-fluid box-gallery">
                     <div className="judul-gallery">
                         <img id="icon-gallery" src={iconGallery}/>
                         <span>&nbsp;&nbsp;GALLERY</span>
