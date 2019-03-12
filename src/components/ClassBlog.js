@@ -7,28 +7,6 @@ import TopNews from '../components/TopNews';
 import Berita from '../components/Berita';
 import Search from '../components/Search'
 
-// class ClassBlog extends Component{
-//     render(){
-//         return(
-//             <div className="ClassBlog">
-//             	<div className="container container-blog">
-//                     <div className="row">
-//                         <div className="col-md-4 col-blog">
-//                             <div className="nav-left">
-//                                 <TopNews />
-//                                 <Search />
-//                             </div>
-//                         </div>
-//                         <div className="col-md-8 col-blog">
-//                             <Berita />
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-
 import photo1 from '../img/sms.png'
 const az = {photo1}
 const urlTop = 'https://newsapi.org/v2/everything'
