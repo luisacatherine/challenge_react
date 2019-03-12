@@ -9,7 +9,7 @@ const Berita = (props) => {
     return(
         <div className="Berita">
             <img className="img-blog" src={props.img}></img>
-            <h2 className="head-2">{props.title}}</h2>
+            <h2 className="head-2">{props.title}</h2>
             <p className="publish-date">
                 <span>{props.date}</span><br/>
                 <span>{props.author}</span>
