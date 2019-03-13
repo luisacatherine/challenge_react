@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MainRoute from "./MainRoute";
 import {withRouter} from "react-router-dom";
+import { connect } from "unistore/react";
+import { actions } from "../store";
 
 import '../style/App.css';
 import '../style/bootstrap.min.css';
@@ -10,7 +12,9 @@ import Header from "../components/Header";
 
 class AppAjax extends Component {
     postSignout = () => {
-        localStorage.removeItem("is_login");
+        this.props.postLogout();
+        console.log(this.props.is_login)
+        // localStorage.removeItem("is_login");
         this.props.history.push("/");
     };
 
@@ -24,4 +28,4 @@ class AppAjax extends Component {
   	}
 }
 
-export default withRouter(AppAjax);
+export default connect("is_login",actions)(withRouter(AppAjax));

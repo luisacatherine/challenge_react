@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import '../style/App.css';
 import '../style/bootstrap.min.css';
 import '../style/main.css';
@@ -28,10 +27,6 @@ class Search extends Component {
       		</div>
     	);
   	}
-}
-
-Search.propTypes = {
-    placeholder: PropTypes.string.isRequired
 }
 
 export default Search;

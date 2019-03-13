@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import '../style/App.css';
 import '../style/bootstrap.min.css';
 import '../style/main.css';
 import logoAlterra from '../logo/logo-alterra-academy@2x.png';
+import { connect } from "unistore/react";
+import { actions } from "../store";
 
 const Header = props => {
-    const is_login = JSON.parse(localStorage.getItem("is_login"));
+    // const is_login = JSON.parse(localStorage.getItem("is_login"));
 
     return(
         <div className="header-new">
@@ -28,7 +30,7 @@ const Header = props => {
                 <div className="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
                     <ul className="navbar-nav ml-auto flex-nowrap">
                         <li className="nav-item">
-                            <Link to='/' style={{ display: is_login ? 'block' : 'none' }} className="nav-link navigation active m-2 menu-item">HOME</Link>
+                            <Link to='/' style={{ display: props.is_login ? 'block' : 'none' }} className="nav-link navigation active m-2 menu-item">HOME</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/blog' className="nav-link navigation nonaktif m-2 menu-item">NEWS</Link>
@@ -40,16 +42,16 @@ const Header = props => {
                             <Link to='/contact' className="nav-link navigation nonaktif m-2 menu-item">CONTACT</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/signup' style={{ display: is_login ? 'none' : 'block' }} className="nav-link navigation nonaktif m-2 menu-item">SIGN UP</Link>
+                            <Link to='/signup' style={{ display: props.is_login ? 'none' : 'block' }} className="nav-link navigation nonaktif m-2 menu-item">SIGN UP</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/signin' style={{ display: is_login ? 'none' : 'block' }} className="nav-link navigation nonaktif m-2 menu-item">SIGN IN</Link>
+                            <Link to='/signin' style={{ display: props.is_login ? 'none' : 'block' }} className="nav-link navigation nonaktif m-2 menu-item">SIGN IN</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/profile' style={{ display: is_login ? 'block' : 'none' }} className="nav-link navigation nonaktif m-2 menu-item">PROFILE</Link>
+                            <Link to='/profile' style={{ display: props.is_login ? 'block' : 'none' }} className="nav-link navigation nonaktif m-2 menu-item">PROFILE</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/' onClick={()=> props.postSignout()} style={{ display: is_login ? 'block' : 'none' }} className="nav-link navigation nonaktif m-2 menu-item">SIGN OUT</Link>
+                            <Link to='/' onClick={()=> props.postSignout()} style={{ display: props.is_login ? 'block' : 'none' }} className="nav-link navigation nonaktif m-2 menu-item">SIGN OUT</Link>
                         </li>
                     </ul>
                 </div>
@@ -58,4 +60,4 @@ const Header = props => {
     )
 }
 
-export default Header;
+export default connect("is_login", actions)(Header);

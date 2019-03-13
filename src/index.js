@@ -8,6 +8,8 @@ import AppRouter from './router/AppRouter';
 import Blog from './pages/Blog';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
+import { Provider } from 'unistore/react';
+import { store } from './store';
 
 // ReactDOM.render(<Home />, document.getElementById('root'));
 // ReactDOM.render(<Gallery />, document.getElementById('root'));
@@ -17,9 +19,11 @@ import {BrowserRouter} from "react-router-dom";
 const rootEl = document.getElementById('root');
 const render = Component =>
     ReactDOM.render(
-        <BrowserRouter>
-            <Component/>
-        </BrowserRouter>,
+        <Provider store={store}>
+            <BrowserRouter>
+                <Component/>
+            </BrowserRouter>
+        </Provider>,
         rootEl
     );
     

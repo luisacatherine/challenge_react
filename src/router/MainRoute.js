@@ -12,7 +12,6 @@ import Cnn from "../pages/Cnn"
 import Reuters from "../pages/Reuters"
 import Cnbc from "../pages/Cnbc"
 import NewYork from "../pages/NewYork"
-import Category from "../components/Category"
 
 const MainRoute = () => {
     return(
